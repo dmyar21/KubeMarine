@@ -4417,7 +4417,7 @@ spec:
         cluster-autoscaler.kubernetes.io/safe-to-evict: 'true'
     spec:
       nodeSelector:
-        {{ plugins['calico']['typha']['nodeSelector'] | toyaml | indent(width=8, indentfirst=False) }}
+        {{ plugins['calico']['typha']['nodeSelector'] | toyaml | indent(width=8, first=False) }}
       hostNetwork: true
       tolerations:
         # Mark the pod as a critical add-on for rescheduling.
@@ -4800,7 +4800,7 @@ spec:
         k8s-app: calico-kube-controllers
     spec:
       nodeSelector:
-        {{ plugins['calico']['kube-controllers']['nodeSelector'] | toyaml | indent(width=8, indentfirst=False) }}
+        {{ plugins['calico']['kube-controllers']['nodeSelector'] | toyaml | indent(width=8, first=False) }}
       tolerations:
         # Mark the pod as a critical add-on for rescheduling.
         - key: CriticalAddonsOnly
