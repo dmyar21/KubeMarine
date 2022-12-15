@@ -114,7 +114,7 @@ def main():
         if arguments[0] == 'selftest':
             return selftest()
         elif arguments[0] == 'version':
-            with open('./kubemarine/version', 'r') as f:
+            with open('/kubemarine/version', 'r') as f:
                 print('Kubemarine %s' % f.read())
             return
 
